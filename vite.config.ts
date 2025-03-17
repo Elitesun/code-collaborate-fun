@@ -18,16 +18,14 @@ export default defineConfig(({ mode }) => ({
   build: {
     target: 'esnext',
     minify: 'esbuild',
-    sourcemap: false, // Disable sourcemaps in production
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
           'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-slot', '@radix-ui/react-toast'],
-          'shadcn': ['@/components/ui'], // Separate chunk for shadcn components
         },
       },
     },
-    chunkSizeWarningLimit: 1000, // Increase warning limit if needed
   },
 }));
