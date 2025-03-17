@@ -44,7 +44,7 @@ const HeroSection = () => {
                 <img 
                   src="/hero-10.png"
                   alt="Developer working on laptop" 
-                  className="relative z-10 w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                  className="relative z-10 w-full h-full object-cover"
                 />
               </div>
             </div>
