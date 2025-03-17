@@ -21,7 +21,7 @@ const studentReviews = [
     program: "Formation Développement Web",
     review: "Grâce à BinarySec Academy, j'ai pu acquérir des compétences solides en programmation. Leur approche peer-to-peer m'a permis d'apprendre plus rapidement et de manière plus interactive qu'avec des méthodes traditionnelles.",
     stars: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
   },
   {
     name: "Mamadou Sow",
@@ -35,14 +35,14 @@ const studentReviews = [
     program: "Product Marketing",
     review: "BinarySec Academy m'a donné les outils pour comprendre le marketing digital dans un contexte tech. Les projets concrets et l'accent mis sur la collaboration m'ont permis de développer mon portfolio et de trouver un emploi rapidement.",
     stars: 4,
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    image: "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
   },
   {
     name: "Jean-Pierre Ndiaye",
     program: "Webmaster & Gestion de Site Web",
     review: "La communauté chez BinarySec est incroyable. J'ai non seulement acquis des compétences techniques, mais j'ai aussi développé un réseau professionnel solide. Leur méthode d'apprentissage par la pratique est exactement ce dont j'avais besoin.",
     stars: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    image: "https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
   }
 ];
 
