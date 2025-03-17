@@ -2,58 +2,58 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "./ServiceCard";
-import { BarChart3, Briefcase, PenTool, Zap } from "lucide-react";
+import { Users, BookOpen, Briefcase, Award } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
-const services = [
+const learningMethods = [
   {
-    title: "Business Strategy",
-    description: "Comprehensive business planning and strategy development to achieve sustainable growth.",
+    title: "Peer-to-Peer Learning",
+    description: "Échangez et apprenez avec votre communauté dans un environnement collaboratif.",
+    icon: <Users />
+  },
+  {
+    title: "Learning by Doing",
+    description: "Développez vos compétences avec des cas réels et des projets pratiques.",
+    icon: <BookOpen />
+  },
+  {
+    title: "Travail en équipe",
+    description: "Acquérez une expérience collaborative essentielle pour votre future carrière.",
     icon: <Briefcase />
   },
   {
-    title: "Brand Design",
-    description: "Creating memorable brand experiences that connect with your target audience.",
-    icon: <PenTool />
-  },
-  {
-    title: "Digital Marketing",
-    description: "Data-driven marketing strategies that deliver measurable results.",
-    icon: <Zap />
-  },
-  {
-    title: "ROI Tracking",
-    description: "Advanced analytics to track and optimize your return on investment.",
-    icon: <BarChart3 />
+    title: "Évaluations hybrides",
+    description: "Théorie, pratique et projets collectifs pour une évaluation complète.",
+    icon: <Award />
   }
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 relative overflow-hidden">
+    <section id="approach" className="py-16 relative overflow-hidden">
       <div className="absolute top-1/4 -left-20 w-40 h-40 bg-purple/10 rounded-full filter blur-3xl"></div>
       
       <div className="container mx-auto px-4">
         <div className="mb-16 max-w-3xl">
           <h2 className="section-title">
-            HERE'S HOW I CAN <br />
-            BE <span className="gradient-text">BEST HELP!</span>
+            🚀 APPRENEZ AUTREMENT AVEC <br />
+            NOTRE <span className="gradient-text">MÉTHODE INNOVANTE!</span>
           </h2>
           <p className="text-gray-400 mb-6">
-            I offer specialized consulting services tailored to help your business reach its full potential through strategic planning and implementation.
+            BinarySec Academy est bien plus qu'une simple plateforme d'apprentissage. Nous réinventons l'éducation tech en Afrique avec une approche axée sur la pratique, la collaboration et l'open source.
           </p>
           <Button className="btn-primary">
-            View All Services <ArrowRight className="ml-2 h-4 w-4" />
+            Découvrir notre approche <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {learningMethods.map((method, index) => (
             <ServiceCard 
               key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
+              title={method.title}
+              description={method.description}
+              icon={method.icon}
             />
           ))}
         </div>
@@ -65,14 +65,14 @@ const ServicesSection = () => {
             <div className="md:w-2/3">
               <div className="inline-flex items-center bg-purple/20 px-4 py-2 rounded-full text-purple text-sm font-medium mb-4">
                 <span className="w-2 h-2 bg-purple rounded-full mr-2"></span>
-                BUSINESS GROWTH CATALYST
+                NOTRE MISSION
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">I'M HELPING BUSINESSES TO REACH THEIR FULL POTENTIAL AND ACHIEVE GREAT SUCCESS</h3>
-              <p className="text-gray-400">With over 10+ years of industry experience, I've helped businesses transform challenges into opportunities.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">OFFRIR AUX JEUNES ET AUX FILLES DES COMPÉTENCES NUMÉRIQUES ESSENTIELLES POUR EXCELLER DANS LES MÉTIERS DE DEMAIN</h3>
+              <p className="text-gray-400">Une éducation tech de qualité, accessible à tous, pour former la prochaine génération de talents africains.</p>
             </div>
             
             <div className="md:w-1/3 flex justify-center md:justify-end">
-              <img src="/placeholder.svg" alt="Growth Chart" className="max-w-full h-auto" />
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Collaborative Learning" className="max-w-full h-auto rounded-lg shadow-xl" />
             </div>
           </div>
         </div>
