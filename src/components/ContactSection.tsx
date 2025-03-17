@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple/10 rounded-full filter blur-3xl"></div>
       
       <div className="container mx-auto px-4">

@@ -27,9 +27,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a href="#home" className="text-white hover:text-purple transition-colors">Accueil</a>
           <a href="#approach" className="text-white hover:text-purple transition-colors">Notre Approche</a>
-          <a href="#formations" className="text-white hover:text-purple transition-colors">Formations</a>
-          <a href="#workshops" className="text-white hover:text-purple transition-colors">Workshops</a>
-          <a href="#opensource" className="text-white hover:text-purple transition-colors">Open Source</a>
+          <a href="#formation" className="text-white hover:text-purple transition-colors">Nos Formations</a>
           <a href="#contact" className="text-white hover:text-purple transition-colors">Contact</a>
         </div>
 
@@ -53,10 +51,8 @@ const Navbar = () => {
         <div className="flex flex-col space-y-6 text-center">
           <a href="#home" className="text-white text-xl" onClick={toggleMenu}>Accueil</a>
           <a href="#approach" className="text-white text-xl" onClick={toggleMenu}>Notre Approche</a>
-          <a href="#formations" className="text-white text-xl" onClick={toggleMenu}>Formations</a>
-          <a href="#workshops" className="text-white text-xl" onClick={toggleMenu}>Workshops</a>
-          <a href="#opensource" className="text-white text-xl" onClick={toggleMenu}>Open Source</a>
-          <a href="#contact" className="text-white text-xl" onClick={toggleMenu}>Contact</a>
+          <a href="#approach" className="text-white text-xl" onClick={toggleMenu}>Nos Formations</a>
+          <a href="#footer" className="text-white text-xl" onClick={toggleMenu}>Contact</a>
           <Button className="bg-purple hover:bg-purple-dark text-white rounded-full px-6 w-full mt-6">
             S'inscrire
           </Button>

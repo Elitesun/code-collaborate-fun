@@ -27,13 +27,26 @@ const HeroSection = () => {
           </div>
           <div className="lg:w-1/2 relative">
             <div className="relative z-10">
-              <div className="absolute top-0 -left-10 w-72 h-72 bg-purple/20 rounded-full filter blur-3xl"></div>
-              <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-500/20 rounded-full filter blur-3xl"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-                alt="Young developers collaborating" 
-                className="relative z-10 animate-float rounded-lg shadow-xl max-w-xs md:max-w-md"
-              />
+              <div className="absolute top-0 -left-10 w-72 h-72 bg-purple/20 rounded-full filter blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+              
+              {/* Floating Geometric Shapes */}
+              <div className="absolute -left-8 top-1/4 w-12 h-12 bg-purple-500/30 rounded-lg animate-float-slow transform rotate-45"></div>
+              <div className="absolute right-4 top-1/3 w-8 h-8 bg-blue-500/30 rounded-full animate-float-delay"></div>
+              <div className="absolute right-12 bottom-1/4 w-10 h-10 bg-pink-500/30 transform rotate-12 animate-float"></div>
+              
+              {/* Main Image with Gradient Mask */}
+              <div className="relative overflow-hidden rounded-full shadow-2xl w-[500px] h-[500px] mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 mix-blend-overlay" style={{
+                  clipPath: 'circle(50% at 50% 50%)',
+                  transform: 'rotate(-15deg) scale(1.5)',
+                }}></div>
+                <img 
+                  src="/hero-10.png"
+                  alt="Developer working on laptop" 
+                  className="relative z-10 w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>

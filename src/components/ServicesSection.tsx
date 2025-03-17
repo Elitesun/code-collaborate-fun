@@ -58,7 +58,7 @@ const ServicesSection = () => {
           ))}
         </div>
         
-        <div className="mt-20 bg-dark-lighter rounded-xl p-8 relative overflow-hidden">
+        <div className="mt-20 bg-dark-lighter rounded-xl p-8 relative overflow-hidden" id="formation">
           <div className="absolute top-0 right-0 w-80 h-80 bg-purple/20 rounded-full filter blur-3xl -z-0"></div>
           
           <div className="flex flex-col md:flex-row md:items-center gap-8 relative z-10">
