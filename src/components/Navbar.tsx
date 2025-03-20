@@ -13,7 +13,9 @@ const Navbar = () => {
 
   const handleClickOutside = (e: React.MouseEvent<HTMLDivElement>) => {
     const menuContent = document.querySelector('.mobile-menu-content');
-    if (!menuContent?.contains(e.target as Node)) {
+    const target = e.target as Node;
+    
+    if (menuContent && !menuContent.contains(target)) {
       setIsMenuOpen(false);
     }
   };
