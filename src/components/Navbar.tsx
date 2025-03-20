@@ -1,21 +1,35 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleClickOutside = (e: React.MouseEvent<HTMLDivElement>) => {
-    const menuContent = document.querySelector('.mobile-menu-content');
-    const target = e.target as Node;
-    
-    if (menuContent && !menuContent.contains(target)) {
+    if (e.target === e.currentTarget) {
       setIsMenuOpen(false);
     }
   };
@@ -62,6 +76,7 @@ const Navbar = () => {
       >
         {/* Mobile Menu Content */}
         <div
+          ref={menuRef}
           className={cn(
             "fixed right-0 top-0 h-full w-80 bg-dark shadow-xl flex flex-col transition-transform duration-300 ease-out mobile-menu-content",
             isMenuOpen ? "translate-x-0" : "translate-x-full"
