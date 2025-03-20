@@ -11,6 +11,13 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleClickOutside = (e: React.MouseEvent<HTMLDivElement>) => {
+    const menuContent = document.querySelector('.mobile-menu-content');
+    if (!menuContent?.contains(e.target as Node)) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <nav className="fixed w-full z-50 bg-dark/90 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -43,19 +50,34 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={cn(
-        "fixed inset-0 bg-dark flex flex-col p-4 pt-20 md:hidden transition-all duration-300 ease-in-out z-40",
-        isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full pointer-events-none"
-      )}>
-        <div className="flex flex-col space-y-6 text-center">
-          <a href="#home" className="text-white text-xl" onClick={toggleMenu}>Accueil</a>
-          <a href="#approach" className="text-white text-xl" onClick={toggleMenu}>Notre Approche</a>
-          <a href="#approach" className="text-white text-xl" onClick={toggleMenu}>Nos Formations</a>
-          <a href="#footer" className="text-white text-xl" onClick={toggleMenu}>Contact</a>
-          <Button className="bg-purple hover:bg-purple-dark text-white rounded-full px-6 w-full mt-6">
-            S'inscrire
-          </Button>
+      {/* Mobile Menu Overlay */}
+      <div
+        className={cn(
+          "fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden transition-opacity duration-300",
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        )}
+        onClick={handleClickOutside}
+      >
+        {/* Mobile Menu Content */}
+        <div
+          className={cn(
+            "fixed right-0 top-0 h-full w-80 bg-dark shadow-xl flex flex-col transition-transform duration-300 ease-out mobile-menu-content",
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          )}
+        >
+          <div className="flex flex-col h-full p-6">
+            <div className="flex-grow flex flex-col items-center justify-center space-y-8">
+              <a href="#home" className="text-white text-xl font-medium hover:text-purple transition-colors" onClick={toggleMenu}>Accueil</a>
+              <a href="#approach" className="text-white text-xl font-medium hover:text-purple transition-colors" onClick={toggleMenu}>Notre Approche</a>
+              <a href="#formation" className="text-white text-xl font-medium hover:text-purple transition-colors" onClick={toggleMenu}>Nos Formations</a>
+              <a href="#contact" className="text-white text-xl font-medium hover:text-purple transition-colors" onClick={toggleMenu}>Contact</a>
+            </div>
+            <div className="mt-auto pt-6 w-full">
+              <Button className="bg-purple hover:bg-purple-dark text-white rounded-full px-6 w-full">
+                S'inscrire
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

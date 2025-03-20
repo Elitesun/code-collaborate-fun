@@ -14,9 +14,10 @@ const HeroSection = () => {
               BinarySec Academy
             </h5>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              🚀 <span className="gradient-text">APPRENEZ.</span><br />
+              <span className="gradient-text">APPRENEZ.</span><br />
               <span className="gradient-text">CONSTRUISEZ.</span><br />
-              <span className="gradient-text">RÉINVENTEZ</span> L'AVENIR DE LA TECH!
+              <span className="gradient-text">RÉINVENTEZ</span> <br />
+              L'AVENIR DE LA TECH!
             </h1>
             <p className="text-gray-400 mb-8 max-w-lg">
               Des formations accessibles et inclusives pour la jeunesse africaine avec une pédagogie innovante à l'ère de l'IA et de la Tech. Un apprentissage pratique avec des projets concrets.
@@ -36,10 +37,13 @@ const HeroSection = () => {
               <div className="absolute right-12 bottom-1/4 w-10 h-10 bg-pink-500/30 transform rotate-12 animate-float"></div>
               
               {/* Main Image with Gradient Mask */}
-              <div className="relative overflow-hidden rounded-full shadow-2xl w-[500px] h-[500px] mx-auto">
+              <div className="relative overflow-hidden shadow-2xl w-[650px] h-[500px] mx-auto" style={{
+                borderRadius: '85% 15% 60% 40% / 65% 40% 60% 35%',
+                transform: 'rotate(-7deg)'
+              }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 mix-blend-overlay" style={{
-                  clipPath: 'circle(50% at 50% 50%)',
-                  transform: 'rotate(-15deg) scale(1.5)',
+                  clipPath: 'ellipse(70% 80% at 65% 45%)',
+                  transform: 'rotate(-3deg) scale(1.8)',
                 }}></div>
                 <img 
                   src="/hero-10.png"

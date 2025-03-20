@@ -87,9 +87,9 @@ const StudentReviewsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row gap-8 flex-wrap justify-center">
           {courses.map((course, index) => (
-            <Card key={index} className="bg-dark-lighter rounded-xl border-none hover:scale-105 transition-transform duration-300">
+            <Card key={index} className="bg-dark-lighter rounded-xl border-none hover:scale-105 transition-transform duration-300 flex-1 min-w-[300px] max-w-[400px]">
               <CardContent className="p-6">
                 <div className="text-4xl mb-4">{course.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{course.title}</h3>
