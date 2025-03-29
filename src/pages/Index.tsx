@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -12,9 +11,9 @@ const Index = () => {
     <div className="min-h-screen bg-dark text-white">
       <Navbar />
       <HeroSection />
-      <ServicesSection  />
-      <StudentReviewsSection  />
-      <ContactSection  />
+      <ServicesSection />
+      <StudentReviewsSection />
+      <ContactSection />
       <Footer />
     </div>
   );

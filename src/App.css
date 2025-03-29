@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -43,21 +42,39 @@
 
 /* Floating animations */
 @keyframes float {
-  0% { transform: translateY(0px) rotate(15deg); }
-  50% { transform: translateY(-30px) rotate(14deg); }
-  100% { transform: translateY(0px) rotate(12deg); }
+  0% {
+    transform: translateY(0px) rotate(15deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(14deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(12deg);
+  }
 }
 
 @keyframes float-slow {
-  0% { transform: translateY(0px) rotate(45deg); }
-  50% { transform: translateY(-15px) rotate(45deg); }
-  100% { transform: translateY(0px) rotate(45deg); }
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
 }
 
 @keyframes float-delay {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
